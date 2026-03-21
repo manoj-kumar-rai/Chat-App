@@ -10,7 +10,8 @@ const chatSchema = new mongoose.Schema({
         required: true
     },
     message: {
-        type: String
+        type: String,
+        maxLength: [50, "Exceeding more than 50 characters"] 
     },
     created_at: {
         type: Date,
